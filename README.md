@@ -1,1 +1,3 @@
-# fe_basic02.08.2023
+# Front End Basic Course
+
+Start 02.08.2023
