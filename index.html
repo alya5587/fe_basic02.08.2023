@@ -3,23 +3,174 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 4</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Selector</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header></header>
     <main>
       <section>
-        <h1>Селектори конспект</h1>
-        <ul>
-          <li>За назвою елемента:</li>
-          <li>За id:</li>
-          <li>За класом:</li>
-          <li>За кількома класами:</li>
-          <li>За вкладеністю:</li>
-        </ul>
+        <h1>Селектори</h1>
+
+        <p>
+          <b>A</b>
+          Як селектор може виступати будь-який елемент HTML, для якого
+          визначаються правила форматування такі як: колір, фон, розмір.
+        </p>
+        <p>
+          <b>#id</b>
+          Іентифікатор визначає унікальне ім'я елемента, яке використовується
+          для зміни його стилю і звернення до нього чере скрипти.
+        </p>
+        <p>
+          <b>.class</b>Класи застосовують, коли необхідно визначити стиль для
+          одного або декількох елементів веб-сторінки. Елементи при цьому можуть
+          бути різними, але мати частково або повністю схожі елементи
+          оформлення. У коді HTML ім'я класу визначається через атрибут class.
+        </p>
+        <p>
+          <b>.class.class2</b>До будь-якого елемента одночасно можна додати
+          кілька класів, перераховуючи їх в атрибуті class через пробіл. у цьому
+          разі до елемента застосовується стиль, описаний у правилах для кожного
+          класу.
+        </p>
+        <p>
+          <b>*</b>Іноді потрібно встановити одночасно один стиль для всіх
+          елементів веб-сторінки, наприклад, задати шрифт або нареслення тексту.
+          У цьому випадку допоможе універсальний селектор, який відповідає
+          будь-якому елементу веб-сторінки.
+        </p>
+        <p>
+          <b>A B</b>Під час створення веб-сторінки часто доводиться вкладати
+          одні елементи всередині інших. Щоб стилі цих елементів
+          використовувалися коректно, допоможуть вкладені селектори. Наприклад,
+          встановити стиль для тегу b, тільки коли він розташовуєтьс всредині
+          контейнера p. Таким чином можна одночасно встановити стиль для
+          окремого елемента, а також елемента який знаходиться всередині іншого.
+        </p>
+        <p>
+          <b>A>B</b>
+
+          Дочірнім називається елемент, який безпосередньо розташовується
+          всередині батьківького елемента. Який елемент виступає батьківським, а
+          який його нащадком легко з'ясувати за допомогою дерева елементів -
+          структури відносин елементів документа між собою.
+        </p>
+        <p>
+          <b>A + B</b>
+          Cусідні називаються елементи веб-сторінки, коли вони йдуть
+          безпосередньо один за одним у коді документа.
+        </p>
+        <p>
+          <b>A ~ B</b>Споріднені селектори за своєю поведінкою схожі на сусідні
+          селектори, але на вдміну від них стильові правила застосовуються до
+          всіх прилеглих елементів.
+        </p>
+        <p>
+          <b>[attr]</b>
+          Встановлює стиль для елемента, якщо задано специфічний атрибут. Його
+          значення в цьому випадку неважливе.
+        </p>
+        <p>
+          <b>[attr='value']</b>
+          Встановлює стиль для елемента у тому випадку, якщо задане певне
+          значення специфічного атрибута.
+        </p>
+        <p>
+          <b>[attr^='value']</b>
+          Встановлює стиль для елемента в тому випадку, якщо значення атрибута
+          починається із зазначеного тексту.
+        </p>
+        <p>
+          <b>[attr$='value']</b>
+          Встановлює стиль для елемента в тому випадку, якщо значення атрибута
+          закінчується зазначеним текстом.
+        </p>
+        <p>
+          <b>[attr*='value']</b>
+          Можливі варіанти, коли стиль слід застосовувати до тега з певним
+          атрибутом, коли частиною його значення є деякий текст. При цьому точно
+          невідомо, в якому місці зазначення включено цей текст - на початку,
+          всередині або наприкінці. У подібному випадку слід використовувати
+          конструкцію *=. Вона визначає, що значення атрибута містить зазначений
+          текст.
+        </p>
+        <p>
+          <b>[attr~='value']</b>
+          Деякі значення атрибутів можуть перераховуватись через пробіл,
+          наприклад імена класів. Щоб задати стиль за наявності в списку
+          необхідного значення, потрібно використовувати конструкцію ~=.
+        </p>
+        <p>
+          <b>[attr|='value']</b>
+          В іменах ідентифікаторів і класів дозволено використовувати символ
+          дефіса (-), що дає змогу створювати значущі значення атрибутів id i
+          class.
+        </p>
       </section>
+      <section>
+        <h2>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+          laudantium.
+        </h2>
+        <p id="text1">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
+          doloremque, repellendus voluptatem molestiae amet tempore repellat
+          quo, aliquid nesciunt fugit at nulla error recusandae quasi nam,
+          numquam non asperiores vero. Aut fugiat illo dicta iure ab eaque ullam
+          quo ratione voluptatem minima error, nam molestias optio nemo modi non
+          ex maxime. Voluptatibus laboriosam soluta obcaecati asperiores, dolor
+          vero repellendus laudantium?
+        </p>
+      </section>
+      <div class="container">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
+        ratione dicta facilis velit fugit repellendus consequatur quo ea autem
+        consectetur aperiam impedit dignissimos quisquam, quis harum non.
+        Necessitatibus, quidem voluptatem? Nam repudiandae quos, quis deleniti
+        soluta atque mollitia! Dolorum nostrum reprehenderit, repudiandae
+        aperiam saepe maiores rem in esse tenetur placeat eveniet dignissimos
+        cum expedita quaerat beatae accusantium ut aspernatur blanditiis.
+        Eligendi perferendis quam, mollitia fuga alias impedit. Vitae suscipit
+        hic delectus dolore. Magnam, ducimus, modi ea sequi inventore minima,
+        molestias in soluta libero praesentium dicta animi itaque vitae
+        assumenda. Cumque. Molestiae sit fugit sapiente nobis, ex vel recusandae
+        sed eligendi nostrum, iste eum cupiditate aspernatur neque laudantium
+        debitis sunt aut odit, itaque doloremque eveniet in modi atque. Earum,
+        error sint. Aspernatur quaerat eaque aut veritatis modi ipsam pariatur
+        necessitatibus nulla sed reiciendis nihil alias impedit voluptatum,
+        perferendis delectus molestiae, sequi non nobis facilis eius ex deleniti
+        fuga ratione. Cum, temporibus. Repellat dignissimos provident, illo
+        omnis reprehenderit molestiae debitis nisi! Alias, quaerat consequatur?
+        Quas natus dicta quod molestias ducimus temporibus sit in odit ipsum
+        explicabo? Natus placeat autem dolore similique dolorem? Nesciunt ipsam
+        illum minus dolores mollitia debitis voluptatibus magnam nam possimus!
+        Sapiente dolores placeat magnam voluptate, doloremque ipsum architecto
+        nostrum excepturi quos magni, saepe dolor ab fuga eaque tenetur
+        doloribus! Laudantium nesciunt quas reprehenderit architecto minus?
+        Optio dolorem exercitationem animi obcaecati assumenda ad autem ratione
+        ipsa. Voluptatem, necessitatibus et praesentium ut quam molestiae
+        exercitationem consequatur veniam aliquid eveniet facilis perferendis!
+        Quis debitis iusto, illum, dolorem, dignissimos vitae cupiditate ratione
+        at voluptatum nihil nesciunt rem temporibus nemo fugit. Expedita
+        consequatur placeat molestias qui, autem eius omnis praesentium itaque
+        fugiat, cupiditate laboriosam? Ullam, rem necessitatibus. Consequatur
+        nostrum accusamus id quis ad accusantium vero! Dignissimos, dicta, velit
+        delectus beatae illum totam nemo, inventore nulla impedit eveniet esse
+        quidem perferendis fugiat soluta asperiores. Culpa.
+      </div>
+      <div>
+        <p class="about abouts">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+          dignissimos culpa amet fugit distinctio perspiciatis. Impedit illum
+          sequi quod, reiciendis eum, dignissimos modi animi maxime mollitia
+          sint quis temporibus totam. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Culpa, quidem. Cupiditate dolorem nemo, deserunt
+          doloremque quibusdam ipsam tenetur veritatis iure, necessitatibus
+          laborum soluta quae eligendi consequatur quasi quisquam quis minus!
+        </p>
+      </div>
     </main>
+
     <footer></footer>
   </body>
 </html>
